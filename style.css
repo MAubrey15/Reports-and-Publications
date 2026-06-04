@@ -43,240 +43,124 @@
     max-width: none;
 }
 
-/* GC Card Layout Styles /*
+/* GC Card Layout Styles (converted for standard CSS) */
 
+/* Layer order */
 @layer reset, default, link, hover, focus;
 
+/* ---------------- RESET ---------------- */
 @layer reset {
-  :host {
-    display: block;
-
-    * {
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-    }
-
-    slot {
-      display: initial;
-    }
+  .gcds-card,
+  .gcds-card * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
   }
 }
 
+/* ---------------- DEFAULT ---------------- */
 @layer default {
-  :host .gcds-card {
-    background-color: var(--gcds-card-background-color);
+  .gcds-card {
+    background-color: var(--gcds-card-background-color, #fff);
     display: block;
-    padding: var(--gcds-card-padding);
+    padding: var(--gcds-card-padding, 1rem);
     height: 100%;
-    color: var(--gcds-card-color);
+    color: var(--gcds-card-color, #000);
     position: relative;
-    border: var(--gcds-card-border);
+    border: var(--gcds-card-border, 1px solid #ccc);
     overflow: hidden;
-    max-width: var(--gcds-card-max-width);
+    max-width: var(--gcds-card-max-width, 100%);
+  }
 
-    .gcds-badge {
-      background-color: var(--gcds-card-badge-background-color);
-      position: absolute;
-      top: 0;
-      left: 0;
-      padding: var(--gcds-card-badge-padding);
-      text-wrap: nowrap;
+  .gcds-card .gcds-badge {
+    background-color: var(--gcds-card-badge-background-color, #eee);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: var(--gcds-card-badge-padding, 0.5rem);
+    white-space: nowrap;
+  }
 
-      @media only screen and (width < 48em) {
-        padding: var(--gcds-card-badge-mobile-padding);
-      }
+  @media only screen and (max-width: 48em) {
+    .gcds-card .gcds-badge {
+      padding: var(--gcds-card-badge-mobile-padding, 0.25rem);
     }
+  }
 
-    .gcds-card__image {
-      display: block;
-      width: 100%;
-      margin: var(--gcds-card-image-margin);
+  .gcds-card .gcds-card__image {
+    display: block;
+    width: 100%;
+    margin: var(--gcds-card-image-margin, 0 0 1rem 0);
+  }
+
+  .gcds-card .gcds-card__title {
+    width: fit-content;
+    font: var(--gcds-card-title-font-desktop, bold 1.25rem sans-serif);
+  }
+
+  @media only screen and (max-width: 48em) {
+    .gcds-card .gcds-card__title {
+      font: var(--gcds-card-title-font-mobile, bold 1rem sans-serif);
     }
+  }
 
-    .gcds-card__title {
-      width: fit-content;
+  /* Add space only if description exists */
+  .gcds-card .gcds-card__title + .gcds-card__description {
+    margin-top: var(--gcds-card-title-margin, 0.5rem);
+  }
 
-      font: var(--gcds-card-title-font-desktop);
+  .gcds-card .gcds-card__description {
+    font: var(--gcds-card-description-font-desktop, 1rem sans-serif);
+    position: relative;
+    z-index: 1;
+  }
 
-      @media only screen and (width < 48em) {
-        font: var(--gcds-card-title-font-mobile);
-      }
-
-      &:has(+ .gcds-card__description) {
-        margin: var(--gcds-card-title-margin);
-      }
-    }
-
-    .gcds-card__description {
-      --gcds-text-size-body-desktop: var(--gcds-card-description-font-desktop);
-
-      & > * {
-        z-index: 1;
-        position: relative;
-      }
-
-      @media only screen and (width < 48em) {
-        font: var(--gcds-card-description-font-mobile);
-      }
+  @media only screen and (max-width: 48em) {
+    .gcds-card .gcds-card__description {
+      font: var(--gcds-card-description-font-mobile, 0.9rem sans-serif);
     }
   }
 }
 
+/* ---------------- LINK (full clickable card) ---------------- */
 @layer link {
-  :host .gcds-card gcds-link::part(link):after {
-    z-index: 0;
+  .gcds-card a::after {
+    content: '';
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     pointer-events: auto;
-    content: '';
   }
 }
 
+/* ---------------- HOVER ---------------- */
 @layer hover {
   @media (hover: hover) {
-    :host .gcds-card:hover {
-      box-shadow: var(--gcds-card-hover-box-shadow);
-      background-color: var(--gcds-card-hover-background-color);
+    .gcds-card:hover {
+      box-shadow: var(--gcds-card-hover-box-shadow, 0 4px 8px rgba(0,0,0,0.2));
+      background-color: var(--gcds-card-hover-background-color, #f5f5f5);
       cursor: pointer;
     }
   }
 }
 
+/* ---------------- FOCUS (accessibility) ---------------- */
 @layer focus {
-  :host {
-    .gcds-card:focus-within {
-      box-shadow: var(--gcds-card-focus-box-shadow);
-      outline: var(--gcds-card-focus-outline);
-      outline-offset: var(--gcds-card-focus-outline-offset);
-    }
+  .gcds-card:focus-within {
+    box-shadow: var(--gcds-card-focus-box-shadow, 0 0 0 3px #005ea5);
+    outline: var(--gcds-card-focus-outline, none);
+    outline-offset: var(--gcds-card-focus-outline-offset, 2px);
+  }
 
-    gcds-link::part(link):focus {
-      border: var(--gcds-card-focus-link-border);
-      box-shadow: var(--gcds-card-focus-link-box-shadow);
-      color: var(--gcds-card-focus-link-color);
-      background-color: var(--gcds-card-focus-link-background-color);
-      outline: var(--gcds-card-focus-link-outline);
-      text-decoration: underline currentColor
-        var(--gcds-card-focus-link-text-decoration-thickness);
-    }
+  .gcds-card a:focus {
+    border: var(--gcds-card-focus-link-border, 2px solid #005ea5);
+    box-shadow: var(--gcds-card-focus-link-box-shadow, none);
+    color: var(--gcds-card-focus-link-color, #000);
+    background-color: var(--gcds-card-focus-link-background-color, #e6f2ff);
+    outline: var(--gcds-card-focus-link-outline, none);
+    text-decoration: underline;
   }
 }
 
-
-/* Card Layout Styles */
-.cards-container {
-	display: grid;
-	grid-template-columns: 1fr;
-	gap: 20px;
-	width: 100%;
-}
-
-.operation-card {
-	border: 1px solid #ddd;
-	border-radius: 4px;
-	background-color: #fff;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-	transition: box-shadow 0.3s ease;
-	overflow: hidden;
-}
-
-.operation-card:hover {
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.card-header {
-	background-color: #f5f5f5;
-	padding: 15px;
-	border-bottom: 1px solid #ddd;
-}
-
-.card-title {
-	margin: 0;
-	font-size: 1.25rem;
-	color: #003d82;
-}
-
-.card-title a {
-	color: #003d82;
-	text-decoration: none;
-}
-
-.card-title a:hover {
-	text-decoration: underline;
-}
-
-.card-content {
-	padding: 15px;
-}
-
-
-
-.card-field {
-    display: grid;
-    grid-template-columns: 180px 1fr 180px 1fr; /* label | value | label | value */
-    gap: 6px 16px;
-    margin-bottom: 12px;
-}
-
-.card-field:last-child {
-    margin-bottom: 0;
-}
-
-/* Position items across the 4 columns */
-.card-field strong:nth-of-type(odd) {
-    grid-column: 1; /* first label */
-}
-
-.card-field p:nth-of-type(odd) {
-    grid-column: 2; /* first value */
-}
-
-.card-field strong:nth-of-type(even) {
-    grid-column: 3; /* second label */
-}
-
-.card-field p:nth-of-type(even) {
-    grid-column: 4; /* second value */
-}
-
-.card-field strong {
-    margin: 0;
-    color: #333;
-    font-weight: 600;
-}
-
-.card-field p {
-    margin: 0;
-    color: #666;
-    line-height: 1.6;
-}
-
-.card-note {
-    padding: 12px 15px;
-    border-top: 1px solid #ddd;
-    font-size: 0.9em;
-    color: #666;
-}
-
-
-/* Hide card when filtered */
-.operation-card.hidden {
-	display: none;
-}
-
-/* Responsive grid for larger screens - keep single column */
-@media (min-width: 768px) {
-	.cards-container {
-		grid-template-columns: 1fr;
-	}
-}
-
-@media (min-width: 1200px) {
-	.cards-container {
-		grid-template-columns: 1fr;
-	}
-}
