@@ -10,7 +10,7 @@
 	<meta name="dcterms.title" content="GC tables"/>
 	<meta name="dcterms.description" content="Simple responsive gc tables"/>
 	<meta name="dcterms.creator" content=" "/>
-	<meta name="dcterms.type" content="eng"/>
+	<meta name="dcterms.language" content="eng"/>
 	<meta name="dcterms.subject" content=""/>
 	<meta name="dcterms.issued" content=""/>
 	<meta name="dcterms.modified" content="2021-06-16"/>
@@ -18,7 +18,7 @@
 	<link href="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon" />
 	<link rel="stylesheet" href="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/css/theme.min.css" />
 	<noscript><link rel="stylesheet" href="https://wet-boew.github.io/themes-dist/GCWeb/wet-boew/css/noscript.min.css" /></noscript>
-	<link rel="stylesheet" href="styles.css" />
+	<link rel="stylesheet" href="style.css" />
 </head>
 <body vocab="http://schema.org/" typeof="WebPage">
 	<nav>
@@ -32,7 +32,7 @@
 		<div id="wb-bnr" class="container">
 			<div class="row">
 				<section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
-					<h2 class="wb-inv">type selection</h2>
+					<h2 class="wb-inv">Language selection</h2>
 					<ul class="list-inline mrgn-bttm-0">
 						<li>
 							<a lang="fr" hreflang="fr" href="gc-table-fr.html">
@@ -133,11 +133,11 @@
 						<form id="filterForm" class="wb-tables-filter mrgn-lft-md mrgn-rght-md" data-bind-to="design">
 							<div class="row mrgn-tp-lg mrgn-bttm-lg">
 								<div class="form-group">
-									<label for="filtertype">Type</label>
-									<select id="filtertype" class="form-control maxwidth">
-										<option value="">All types</option>
-										<option value="Annual">Annual reports</option>
-										<option value="Audits">Audits and evaluations</option>
+									<label for="filterLanguage">Language:</label>
+									<select id="filterLanguage" class="form-control maxwidth">
+										<option value="">All languages</option>
+										<option value="English">English</option>
+										<option value="French">French</option>
 									</select>
 								</div>
 
@@ -210,21 +210,21 @@
 
 <div class="cards-container">
 
-<div class="operation-card data-row"
-     data-type="French"
+<div class="gcds-card data-row"
+     data-language="French"
      data-special="Yes"
      data-grades="JK-12"
      data-rep="Yes">
 
 
-  <div class="card-header">
-    <h3 class="card-title">
+  <div class="gcds-card__header">
+    <h3 class="gcds-card__title">
       <a href="http://www.campus-monod.fr/">Lycée Théodore-Monode</a>
     </h3>
   </div>
 
   
-<div class="card-content">
+<div class="gcds-card__content">
 
   <div class="card-field">
     <strong>Mission</strong><p>ABDBI</p>
@@ -233,7 +233,7 @@
 
   <div class="card-field">
     <strong>Curriculum</strong><p>American</p>
-	  <strong>type</strong><p>French</p>
+	  <strong>Language</strong><p>French</p>
   </div>
 
   <div class="card-field">
@@ -249,21 +249,21 @@
 </div>
 
 
-<div class="operation-card data-row"
-     data-type="English"
+<div class="gcds-card data-row"
+     data-language="English"
      data-special="TBC"
      data-grades="JK-8"
      data-rep="No">
 
 
-  <div class="card-header">
-    <h3 class="card-title">
+  <div class="gcds-card__header">
+    <h3 class="gcds-card__title">
       <a href="https://byroncollege.gr/">Byron College</a>
     </h3>
   </div>
 
  
-<div class="card-content">
+<div class="gcds-card__content">
 
   <div class="card-field">
     <strong>Mission</strong><p>ATHNS</p>
@@ -272,7 +272,7 @@
 
   <div class="card-field">
     <strong>Curriculum</strong><p>British</p>
-	  <strong>type</strong><p>English</p>
+	  <strong>Language</strong><p>English</p>
   </div>
 
   <div class="card-field">
@@ -285,8 +285,8 @@
     <strong>Representative School</strong><p>No</p>
   </div>
 	
-<div class="card-note">
-  <strong>Note:</strong> The British curriculum is not compatible for Ontario grades 9–12. Students already in the system or able to graduate at post may continue in the British system. Exceptions require WG B approval. Contact your FSD Coordinator or CEM Guidance Counsellor (CAF members only) for clarification.
+<div class="gcds-card__footer">
+  <strong>Note:</strong> The British curriculum is not compatible for Ontario grades 9–12. Students already in the system or able to graduate at post may continue in the British system. Exceptions r[...]
 </div>
 
 
