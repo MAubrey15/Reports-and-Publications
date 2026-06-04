@@ -1,352 +1,136 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en" dir="ltr">
 <head>
-	<meta charset="utf-8">
-	<meta content="width=device-width, initial-scale=1" name="viewport">
-	<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
-	<title>RP table</title>
-	<meta name="description" content="Simple responsive gc tables" />
-	<meta name="author" content=" "/>
-	<meta name="dcterms.title" content="GC tables"/>
-	<meta name="dcterms.description" content="Simple responsive gc tables"/>
-	<meta name="dcterms.creator" content=" "/>
-	<meta name="dcterms.language" content="eng"/>
-	<meta name="dcterms.subject" content=""/>
-	<meta name="dcterms.issued" content=""/>
-	<meta name="dcterms.modified" content="2021-06-16"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link href="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon" />
-	<link rel="stylesheet" href="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/css/theme.min.css" />
-	<noscript><link rel="stylesheet" href="https://wet-boew.github.io/themes-dist/GCWeb/wet-boew/css/noscript.min.css" /></noscript>
-	<link rel="stylesheet" href="style.css" />
+  <title>Reports and Publications</title>
+
+  <link rel="stylesheet" href="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/css/theme.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body vocab="http://schema.org/" typeof="WebPage">
-	<nav>
-		<ul id="wb-tphp">
-			<li class="wb-slc"><a class="wb-sl" href="#wb-cont">Skip to main content</a></li>
-			<li class="wb-slc visible-sm visible-md visible-lg"><a class="wb-sl" href="#wb-info">Skip to About this site</a></li>
-		</ul>
-	</nav>
 
-	<header>
-		<div id="wb-bnr" class="container">
-			<div class="row">
-				<section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
-					<h2 class="wb-inv">Language selection</h2>
-					<ul class="list-inline mrgn-bttm-0">
-						<li>
-							<a lang="fr" hreflang="fr" href="gc-table-fr.html">
-								<span class="hidden-xs" translate="no">Français</span>
-								<abbr title="Français" translate="no" class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">fr</abbr>
-							</a>
-						</li>
-					</ul>
-				</section>
+<body>
 
-				<div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
-					<a href="https://wet-boew.github.io/GCWeb/" property="url">
-						<img src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/sig-blk-en.svg" alt="Government of Canada" property="logo" />
-					</a>
-					<meta property="name" content="Government of Canada">
-					<meta property="areaServed" typeof="Country" content="Canada" />
-					<link property="logo" href="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/wmms-blk.svg" />
-				</div>
+<main class="container">
+  <h1 id="wb-cont">Reports and Publications</h1>
+  <p>Browse reports and publications using filters or search.</p>
 
-				<section id="wb-srch" class="col-lg-offset-4 col-md-offset-4 col-sm-offset-2 col-xs-12 col-sm-5 col-md-4">
-					<h2>Search</h2>
-					<form action="#" method="post" name="cse-search-box" role="search">
-						<div class="form-group wb-srch-qry">
-							<label for="wb-srch-q" class="wb-inv">Search canada.ca</label>
-							<input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="34" maxlength="170" placeholder="Search canada.ca" />
-							<datalist id="wb-srch-q-ac"></datalist>
-						</div>
-						<div class="form-group submit">
-							<button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub">
-								<span class="glyphicon-search glyphicon"></span>
-								<span class="wb-inv">Search</span>
-							</button>
-						</div>
-					</form>
-				</section>
-			</div>
-		</div>
+  <div class="row">
 
-		<hr>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8">
-					<nav class="gcweb-menu" typeof="SiteNavigationElement">
-						<h2 class="wb-inv">Menu</h2>
-						<button type="button" aria-haspopup="true" aria-expanded="false"><span class="wb-inv">Main </span>Menu <span class="expicon glyphicon glyphicon-chevron-down"></span></button>
-						<ul role="menu" aria-orientation="vertical" data-ajax-replace="https://www.Canada.ca/content/dam/Canada/sitemenu/sitemenu-v2-en.html">
-							<li role="presentation"><a role="menuitem" href="https://www.Canada.ca/en/services/jobs.html">Jobs and the workplace</a></li>
-							<li role="presentation"><a role="menuitem" href="https://www.Canada.ca/en/services/immigration-citizenship.html">Immigration and citizenship</a></li>
-							<li role="presentation"><a role="menuitem" href="https://travel.gc.ca/">Travel and tourism</a></li>
-							<li role="presentation"><a role="menuitem" href="https://www.Canada.ca/en/services/business.html">Business and industry</a></li>
-							<li role="presentation"><a role="menuitem" href="https://www.Canada.ca/en/services/benefits.html">Benefits</a></li>
-							<li role="presentation"><a role="menuitem" href="https://www.Canada.ca/en/services/health.html">Health</a></li>
-							<li role="presentation"><a role="menuitem" href="https://www.Canada.ca/en/services/taxes.html">Taxes</a></li>
-							<li role="presentation"><a role="menuitem" href="https://www.Canada.ca/en/services/environment.html">Environment and natural resources</a></li>
-							<li role="presentation"><a role="menuitem" href="https://www.Canada.ca/en/services/defence.html">National security and defence</a></li>
-							<li role="presentation"><a role="menuitem" href="https://www.Canada.ca/en/services/culture.html">Culture, history and sport</a></li>
-							<li role="presentation"><a role="menuitem" href="https://www.Canada.ca/en/services/policing.html">Policing, justice and emergencies</a></li>
-							<li role="presentation"><a role="menuitem" href="https://www.Canada.ca/en/services/transport.html">Transport and infrastructure</a></li>
-							<li role="presentation"><a role="menuitem" href="https://www.Canada.ca/en/services/finance.html">Money and finances</a></li>
-							<li role="presentation"><a role="menuitem" href="https://www.Canada.ca/en/services/science.html">Science and innovation</a></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</div>
+    <!-- FILTERS -->
+    <div class="col-md-3 push-down">
+      <aside id="sidebar">
+        <details open>
+          <summary class="bg-primary text-center">Filter options</summary>
 
-		<nav id="wb-bc" property="breadcrumb">
-			<h2>You are here:</h2>
-			<div class="container">
-				<ol class="breadcrumb" typeof="BreadcrumbList">
-					<li property="itemListElement" typeof="ListItem">
-						<a property="item" typeof="WebPage" href="https://www.Canada.ca/en.html">
-							<span property="name">Canada.ca</span>
-						</a>
-						<meta property="position" content="1">
-					</li>
-					<li property="itemListElement" typeof="ListItem">
-						<a property="item" typeof="WebPage" href="https://www.Canada.ca/en/services/defence.html">
-							<span property="name">CEM</span>
-						</a>
-						<meta property="position" content="2">
-					</li>
-				</ol>
-			</div>
-		</nav>
-	</header>
+          <form id="filterForm" class="mrgn-lft-md mrgn-rght-md">
+            <div class="row mrgn-tp-lg mrgn-bttm-lg">
 
-	<main class="container" property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
-		<h1 id="wb-cont" property="name">Reports and Publications</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend consectetur lorem, tincidunt aliquam lorem placerat sit amet.</p>
+              <!-- Type -->
+              <div class="form-group">
+                <label for="filterType">Type:</label>
+                <select id="filterType" class="form-control">
+                  <option value="">All types</option>
+                  <option value="Strategies, plans and policies">Strategies, plans and policies</option>
+                  <option value="Annual report">Annual reports</option>
+                  <option value="Audits and evaluations">Audits and evaluations</option>
+                </select>
+              </div>
 
-		<div class="row">
-			<!-- Filters Column -->
-			<div class="col-md-3 push-down">
-				<aside id="sidebar">
-					<details open="">
-						<summary class="bg-primary text-center">Filter options</summary>
-						<form id="filterForm" class="wb-tables-filter mrgn-lft-md mrgn-rght-md" data-bind-to="design">
-							<div class="row mrgn-tp-lg mrgn-bttm-lg">
-								<div class="form-group">
-									<label for="filterLanguage">Language:</label>
-									<select id="filterLanguage" class="form-control maxwidth">
-										<option value="">All languages</option>
-										<option value="English">English</option>
-										<option value="French">French</option>
-									</select>
-								</div>
+              <!-- Year -->
+              <div class="form-group">
+                <label for="filterYear">Date of publication:</label>
+                <select id="filterYear" class="form-control">
+                  <option value="">All years</option>
+                  <option value="2022">2022</option>
+                  <option value="2021">2021</option>
+                  <option value="2019">2019</option>
+                </select>
+              </div>
 
-								
-<div class="form-group">
-  <label for="filterSpecial">Special Education:</label>
-  <select id="filterSpecial" class="form-control maxwidth">
-    <option value="">All types</option>
-    <option value="Yes">Yes</option>
-    <option value="No">No</option>
-    <option value="TBC">TBC</option>
-  </select>
-</div>
+              <div class="col-md-12 mrgn-tp-lg">
+                <button type="button" class="btn btn-default full-width" id="resetFilters">
+                  Reset Filters
+                </button>
+              </div>
 
-<div class="form-group">
-  <label for="filterRep">Representative School:</label>
-  <select id="filterRep" class="form-control maxwidth">
-    <option value="">All</option>
-    <option value="Yes">Yes</option>
-    <option value="No">No</option>
-  </select>
-</div>
-
-								<div class="form-group">
-									<label for="filterGrade">Grade:</label>
-									<select id="filterGrade" class="form-control maxwidth">
-										<option value="">All grades</option>
-										<option value="JK">JK</option>
-										<option value="SK">SK</option>
-										<option value="1">1</option>
-										<option value="2">2</option>
-										<option value="3">3</option>
-										<option value="4">4</option>
-										<option value="5">5</option>
-										<option value="6">6</option>
-										<option value="7">7</option>
-										<option value="8">8</option>
-										<option value="9">9</option>
-										<option value="10">10</option>
-										<option value="11">11</option>
-										<option value="12">12</option>
-									</select>
-								</div>
-
-								<div class="col-md-12 mrgn-tp-lg">
-									<button type="button" class="btn btn-default full-width" id="resetFilters">Reset Filters</button>
-								</div>
-							</div>
-						</form>
-					</details>
-				</aside>
-			</div>
-
-		
-<div class="col-md-9">
-
-    <!-- Search bar -->
-    <div class="search-bar-wrapper mrgn-bttm-md">
-      <div class="form-group">
-        <label for="searchOperations">Search schools:</label>
-        <input 
-          id="searchOperations" 
-          type="text" 
-          class="form-control" 
-          placeholder="Type to search all schools"
-          aria-label="Search schools"
-        />
-      </div>
+            </div>
+          </form>
+        </details>
+      </aside>
     </div>
 
-<div class="cards-container">
+    <!-- CONTENT -->
+    <div class="col-md-9">
 
-<div class="gcds-card data-row"
-     data-language="French"
-     data-special="Yes"
-     data-grades="JK-12"
-     data-rep="Yes">
+      <!-- SEARCH -->
+      <div class="search-bar-wrapper mrgn-bttm-md">
+        <div class="form-group">
+          <label for="searchOperations">Search reports:</label>
+          <input id="searchOperations" type="text" class="form-control"
+                 placeholder="Type to search reports">
+        </div>
+      </div>
 
+      <!-- CARDS -->
+      <div class="cards-container">
 
-  <div class="gcds-card__header">
-    <h3 class="gcds-card__title">
-      <a href="http://www.campus-monod.fr/">Lycée Théodore-Monode</a>
-    </h3>
-  </div>
+        <!-- Card 1 -->
+        <div class="gcds-card data-row"
+             data-type="Strategies, plans and policies"
+             data-year="2022">
 
-  
-<div class="gcds-card__content">
+          <h3 class="gcds-card__title">
+            <a href="https://www.canada.ca/en/department-national-defence/corporate/reports-publications/department-of-national-defence-accessibility-plan.html">
+              Department of National Defence Accessibility Plan
+            </a>
+          </h3>
 
-  <div class="card-field">
-    <strong>Mission</strong><p>ABDBI</p>
-    <strong>Fee type</strong><p>Fee-paying</p>
-  </div>
+          <p><strong>Type:</strong> Strategies, plans and policies</p>
+          <p><strong>Date of publication:</strong> 2022</p>
 
-  <div class="card-field">
-    <strong>Curriculum</strong><p>American</p>
-	  <strong>Language</strong><p>French</p>
-  </div>
+        </div>
 
-  <div class="card-field">
-    <strong>Grade</strong><p>JK-12</p>
-	<strong>Offers special education</strong> <a href="https://www.gemsworldacademy-abudhabi.com/Academics/Student-Support-Services">Yes</a>
-  </div>
+        <!-- Card 2 -->
+        <div class="gcds-card data-row"
+             data-type="Annual report"
+             data-year="2019">
 
-  <div class="card-field">
-    <strong>Representative School</strong><p>Yes</p>
-  </div>
+          <h3 class="gcds-card__title">
+            <a href="https://www.canada.ca/en/department-national-defence/corporate/reports-publications/administration-access-information-act-annual-reports-parliament/2018-19-dnd-annual-report-to-parliament-atia.html">
+              2018–2019 Annual Report to Parliament – Administration of the Access to Information Act
+            </a>
+          </h3>
 
-</div>
-</div>
+          <p><strong>Type:</strong> Annual report</p>
+          <p><strong>Date of publication:</strong> 2019</p>
 
+        </div>
 
-<div class="gcds-card data-row"
-     data-language="English"
-     data-special="TBC"
-     data-grades="JK-8"
-     data-rep="No">
+        <!-- Card 3 -->
+        <div class="gcds-card data-row"
+             data-type="Audits and evaluations"
+             data-year="2021">
 
+          <h3 class="gcds-card__title">
+            <a href="https://www.canada.ca/en/department-national-defence/corporate/reports-publications/audit-evaluation/evaluation-naval-force-development.html">
+              Evaluation of Naval Force Development
+            </a>
+          </h3>
 
-  <div class="gcds-card__header">
-    <h3 class="gcds-card__title">
-      <a href="https://byroncollege.gr/">Byron College</a>
-    </h3>
-  </div>
+          <p><strong>Type:</strong> Audits and evaluations</p>
+          <p><strong>Date of publication:</strong> 2021</p>
 
- 
-<div class="gcds-card__content">
+        </div>
 
-  <div class="card-field">
-    <strong>Mission</strong><p>ATHNS</p>
-    <strong>Fee type</strong><p>Fee-paying</p>
-  </div>
+      </div> <!-- cards-container -->
 
-  <div class="card-field">
-    <strong>Curriculum</strong><p>British</p>
-	  <strong>Language</strong><p>English</p>
-  </div>
+    </div> <!-- col-md-9 -->
 
-  <div class="card-field">
-    <strong>Grade</strong><p>JK-8</p>
-	  <strong>Offers special education</strong><p>TBC</p>
-  </div>
+  </div> <!-- ✅ row properly closed -->
 
-  <div class="card-field">
-    
-    <strong>Representative School</strong><p>No</p>
-  </div>
-	
-<div class="gcds-card__footer">
-  <strong>Note:</strong> The British curriculum is not compatible for Ontario grades 9–12. Students already in the system or able to graduate at post may continue in the British system. Exceptions r[...]
-</div>
+</main>
 
-
-</div>
-</div>
-
- </div>
-
-</div>
-
-	
-
-					
-
-				<section class="pagedetails">
-					<h2 class="wb-inv">Page details</h2>
-					<div class="row">
-						<div class="col-xs-12">
-							<dl id="wb-dtmd">
-								<dt>Date modified:</dt>
-								<dd><time property="dateModified">2021-06-16</time></dd>
-							</dl>
-						</div>
-					</div>
-				</section>
-			</div>
-		</div>
-	</main>
-
-	<footer id="wb-info">
-		<h2 class="wb-inv">About this site</h2>
-
-		<div class="gc-main-footer">
-			<div class="container">
-				<nav>
-					<h3>Government of Canada</h3>
-					<ul class="list-col-xs-1 list-col-sm-2 list-col-md-3">
-						<li><a href="https://www.Canada.ca/en/contact.html">All contacts</a></li>
-						<li><a href="https://www.Canada.ca/en/government/dept.html">Departments and agencies</a></li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-
-		<div class="gc-sub-footer">
-			<div class="container d-flex align-items-center">
-				<nav>
-					<h3 class="wb-inv">Government of Canada Corporate</h3>
-					<ul>
-						<li><a href="https://www.Canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
-						<li><a href="https://www.Canada.ca/en/transparency/privacy.html">Privacy</a></li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-	</footer>
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB" crossorigin="anonymous"></script>
-	<script src="https://wet-boew.github.io/themes-dist/GCWeb/wet-boew/js/wet-boew.min.js"></script>
-	<script src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/js/theme.min.js"></script>
-	<script src="script.js"></script>
 </body>
 </html>
